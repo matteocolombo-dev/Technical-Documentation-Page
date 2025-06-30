@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Basic HTML technical Documentation Page</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main id="main-doc">
+      <nav id="navbar">
+        <header><h1>Basic HTML</h1></header>
+        <a href="#introduction" class="nav-link">Introduction</a>
+        <a href="#prerequisites_and_learning_outcomes" class="nav-link">Prerequisites and learning outcomes</a>
+        <a href="#what_is_html?" class="nav-link">What is HTML?</a>
+        <a href="#elements" class="nav-link">Elements</a>
+        <a href="#opening_and_closing_tags" class="nav-link">Opening and closing tags</a>
+        <a href="#attribute" class="nav-link">Attribute</a>
+        <a href="#html_boilerplate" class="nav-link">HTML Boilerplate</a>
+        <a href="#other_main_html_elements" class="nav-link">Other main HTML elements</a>
+        <a href="#reference" class="nav-link">Reference</a>
+      </nav>
+      <section class="main-section" id="introduction">
+        <header>
+          <h2>Introduction</h2>
+        </header>
+        <p>HTML (HyperText Markup Language) is the code that is used to structure a web page and its content. This article provides a basic understanding of HTML and its functionality, and shows you how to create the basic content for your first website.</p>
+      </section>
+      <section class="main-section" id="prerequisites_and_learning_outcomes">
+        <header>
+          <h2>Prerequisites and learning outcomes</h2>
+        </header>
+        <p class="no-margin-botton">The prerequisites are:</p>
+        <ul class="indent">
+          <li>basic familiarity with your computer operating system;</li>
+          <li>the basic software you will use to build a website;</li>
+          <li>file systems.</li>
+        </ul>
+        <p class="no-margin-botton">The learning outcomes are:</p>
+          <ul class="indent">
+            <li>the purpose and function of HTML;</li>
+            <li>the basic parts of HTML syntax — opening and closing tags, elements, attributes, head, body;</li>
+            <li>common HTML elements including paragraphs, headings, images, lists, and links.</li>
+          </ul>      
+      </section>
+      <section class="main-section" id="what_is_html?">
+        <header>
+          <h2>What is HTML?</h2>
+        </header>
+        <p>HTML is a markup language consisting of a series of elements used to wrap (or enclose) text content to define its structure and cause it to behave in a certain way.</p>
+        <p>Let's look at an example — the following content will all be shown on the same line when displayed on a web page, as it is not structured in any way:</p>
+        <pre>
+          <code>
+  Instructions for life:  
+  Eat
+  Sleep
+  Repeat
+          </code>
+        </pre>       
+        <p>If we wrap this content with the following HTML elements, we can turn that single line into a paragraph (<code>&lt;p&gt;</code>) and three bullet points (<code>&lt;li&gt;</code>):</p>
+      <pre>
+        <code>
+  &lt;p&gt;Instructions for life:&lt;/p&gt;  
+  &lt;ul&gt;
+    &lt;li&gt;Eat&lt;/li&gt;
+    &lt;li&gt;Sleep&lt;/li&gt;
+    &lt;li&gt;Repeat&lt;/li&gt;
+  &lt;/ul&gt;
+        </code>
+      </pre>
+        <p>As well as structuring text, HTML has many other uses — making text or images link to other web pages, embedding images or videos, creating data tables, and so on.</p>
+      </section>
+      <section class="main-section" id="elements">
+        <header><h2>Elements</h2>
+      </header>
+      <p>An element is a part of a webpage. In XML and HTML, an element may contain a data item or a chunk of text or an image, or perhaps nothing. A typical element includes an opening tag with some attributes, enclosed text content, and a closing tag.</p>
+      <p>Elements and tags are not the same things. Tags begin or end an element in source code, whereas elements are part of the DOM, the document model for displaying the page in the browser.</p>
+      </section>
+      <section class="main-section" id="opening_and_closing_tags">
+        <header>
+          <h2>Opening and closing tags</h2>
+        </header>
+        <p>In HTML, a tag is used for creating an element.</p>
+        <p>The name of an HTML element is the name that appears at the beginning of the element's start tag and at the end of the element's end tag (if the element has an end tag). For example, the p in the <code>&lt;p&gt;</code> start tag and <code>&lt;/p&gt;</code> end tag is the name of the HTML paragraph element. Note that an element name in an end tag is preceded by a slash character: <code>&lt;/p&gt;</code>, and that for void elements, the end tag is neither required nor allowed.</p>
+      </section>
+      <section class="main-section" id="attribute">
+        <header>
+          <h2>Attribute</h2>
+        </header>
+        <p>An attribute extends an HTML or XML element, changing its behavior or providing metadata.</p>
+        <p>An attribute always has the form <code>name="value"</code> (the attribute's identifier followed by its associated value). You may see attributes without an equals sign or a value. That is a shorthand for providing the empty string in HTML. However, this is not valid in XML: XML requires all attributes to have an explicit value.</p>
+        <h3>ID</h3>
+        <p>The <code>id</code> global attribute defines an identifier (ID) which must be unique in the whole document.</p>
+        <h3>Classes</h3>
+        <p>The <code>class</code> global attribute is a list of the classes of the element, separated by ASCII whitespace.</p>
+      </section>
+      <section class="main-section" id="html_boilerplate">
+        <header>
+          <h2>HTML Boilerplate</h2>
+        </header>
+        <pre>
+          <code>
+
+  &lt;!doctype html&gt;
+  &lt;html lang="en-US"&gt;
+    &lt;head&gt;
+      &lt;meta charset="utf-8" /&gt;
+      &lt;meta name="viewport" content="width=device-width" /&gt;  
+      &lt;title&gt;My test page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;img src="" alt="My test image" /&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;
+          </code>
+        </pre>
+        <p class="no-margin-botton">Here, we have the following:</p>
+        <ul class="indent">
+          <li>
+            <code>&lt;!doctype html&gt;</code>: The doctype is a required preamble.They are basically just needed to make sure your document behaves correctly;
+          </li>
+          <li><code>&lt;html&gt;&lt;/html&gt;</code>: The <code>&lt;html&gt;</code> element wraps all the content on the entire page and is sometimes known as the root element. It also includes the <code>lang</code> attribute, which sets the primary language of the document;</li>
+          <li><code>&lt;head&gt;&lt;/head&gt;</code>: The <code>&lt;head&gt;</code> element wraps all the content on the entire page and is sometimes known as the root element. It also includes the lang attribute, which sets the primary language of the document;</li>
+          <li><code>&lt;meta charset="utf-8"&gt;</code>: This element sets the character set your document should use to UTF-8, which includes most characters from the vast majority of written languages;</li>
+          <li><code>&lt;meta name="viewport" content="width=device-width"&gt;</code>: This viewport element ensures the page renders at the width of the browser viewport, preventing mobile browsers from rendering pages wider than the viewport and then shrinking them down;</li>
+          <li><code>&lt;title&gt;&lt;/title&gt;</code>: The <code>&lt;title&gt;</code> element sets the titlw of your page, which is the title that appears in the browser tab the page is loaded in. It is also used to describe the page when you bookmark/favorite it;</li>
+          <li><code>&lt;body&gt;&lt;/body&gt;</code>: The <code>&lt;body&gt;</code> element contains all the content that you want to show to web users when they visit your page, whether that's text, images, videos, games, playable audio tracks, or whatever else. At the moment it only contains a single <code>&lt;img&gt;</code> element, but we'll add more content later on.</li>
+        </ul>
+      </section>
+      <section class="main-section" id="other_main_html_elements">
+        <header>
+          <h2>Other main HTML elements</h2>
+        </header>
+        <h3>Headings</h3>
+        <p>Heading elements allow you to specify that certain parts of your content are headings — or subheadings. HTML contains 6 heading levels, &lt;h1&gt;–&lt;h6&gt;, although you'll commonly only use 3 to 4 at most.</p>
+        <h3>Paragraphs</h3>
+        <p>Paragraph <code>&lt;p&gt;</code> elements are for containing paragraphs of text; you'll use these frequently when marking up regular text content.</p>
+        <h3>Lists</h3>
+        <p class="no-margin-botton">The most common list types are ordered and unordered lists:</p>
+        <ol class="indent double-indent">
+          <li>Unordered lists are for lists where the order of the items doesn't matter, such as a shopping list. These are wrapped in a <code>&lt;ul</code> element.</li>
+          <li>Ordered lists are for lists where the order of the items does matter, such as a list of cooking instructions in a recipe. These are wrapped in an <code>&lt;ol&gt;</code> element.</li>
+        </ol>
+        <p>Each item inside the lists is put inside an <code>&lt;li&gt;</code> (list item) element.</p>
+        <h3>Links</h3>
+        <p>To add a link, we need to use an <code>&lt;a&gt;</code> element, "a" being short for "anchor".</p>
+        <h3>Images</h3>
+        <p>Images are embedded with <code>&lt;img&gt;</code> element</p>
+        <h3>Videos and Audios</h3>
+        <p>The <code>&lt;video&gt;</code> HTML element embeds a media player which supports video playback into the document.<br>
+The <code>&lt;audio&gt;</code> HTML element is used to embed sound content in documents. It may contain one or more audio sources, represented using the src attribute or the <code>&lt;source&gt;</code> element: the browser will choose the most suitable one.</p>
+      </section>
+      <section class="main-section" id="reference">
+        <header>
+          <h2>Reference</h2>
+        </header>
+        <p>All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" title="HTML Mozilla Web Documents">MDN</a></p>
+      </section>
+     </main>  
+  </body>
+</html>

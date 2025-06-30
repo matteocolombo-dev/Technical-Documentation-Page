@@ -1,0 +1,191 @@
+:root {
+  --main-color: #000;
+  --main-bg: #fff;
+  --second-bg: #F9F9FB;
+  --color-accent: #dfd9d9;
+}
+
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+    scroll-behavior: smooth;
+  }
+
+html {
+  font-size: 1rem;
+}
+
+body {
+  font-family: Georgia, serif; 
+  color: var(--main-color);
+  background-color: var(--main-bg);
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  text-align: justify;
+}
+
+ h2, h3 {
+  margin-bottom: 1rem;
+}
+
+p {
+  margin: 0 0 1rem 1rem;
+  font-size: 1rem;
+  width: 100%;
+}
+
+h3 ~ p {
+  padding-left: 2rem;
+}
+
+code {
+  background-color: var(--second-bg);
+  border-radius: 3px;
+  padding: 1px 3px;
+  max-width: 100%;
+}
+
+pre {
+  background-color: var(--second-bg);
+  border-radius: 3px;
+  width: 100%;
+  overflow: auto;
+  margin: 0 1rem 1rem 1rem;
+}
+
+a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+.main-section {
+  padding: 0 1.5rem;
+  line-height: 1.5;
+}
+
+.main-section h2 {
+  font-size: 1.8rem;
+}
+
+.main-section h3 {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+
+.indent {
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+}
+
+.indent li {
+  margin-left: 1rem;
+}
+
+.no-margin-botton {
+  margin-bottom: 0;
+}
+
+.double-indent li {
+  margin-left: 2rem;
+}
+
+#navbar {
+  background-color: var(--second-bg);
+  border-bottom: 1px solid var(--main-color);
+  
+}
+
+#navbar header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: var(--color-accent);
+  border-bottom: 2px solid var(--main-color);
+}
+
+#navbar h1 {
+  text-align: center;
+  font-size: 2rem;
+  padding: 0.5rem 0;
+}
+
+#navbar a {
+  display: block;  
+  border-top: 1px solid var(--main-color);
+  padding: 0.5rem 1.5rem;
+} 
+
+#navbar a:hover {
+  background-color: var(--color-accent);
+}
+
+#introduction  {
+  padding-top: 1rem;
+}
+
+#references a {
+  color: #0000ff;
+}
+
+#references a:visited {
+  color: var(--main-color);
+}
+
+#references a:hover {
+  font-weight: bold;
+}
+
+/* Large Screen */
+
+@media screen and (min-width: 1025px) {
+
+  section {
+    margin-left: 300px;
+  }
+
+  pre {
+    padding: 0.5rem;
+  }
+
+  #navbar {
+    height: 100vh;
+    width: 300px;
+    font-size: 1.5rem;
+    border-right: 2px solid var(--main-color);   
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+  }
+
+  #navbar h1 {
+    font-size: 2.5rem;
+    text-align: left;
+    padding: 1.25rem 0 1.25rem  1.25rem ;
+  }
+
+  #navbar a {
+    padding-left: 1.25rem;
+  }
+
+  #navbar a:last-child {
+    border-bottom: 1px solid var(--main-color);
+  }
+
+  #introduction {
+    padding-top: 1.6rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+  }
+}
