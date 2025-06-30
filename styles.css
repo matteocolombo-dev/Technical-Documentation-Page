@@ -130,15 +130,15 @@ a {
   padding-top: 1rem;
 }
 
-#references a {
+#reference a {
   color: #0000ff;
 }
 
-#references a:visited {
+#reference a:visited {
   color: var(--main-color);
 }
 
-#references a:hover {
+#reference a:hover {
   font-weight: bold;
 }
 
